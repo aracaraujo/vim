@@ -78,4 +78,5 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<leader>t', ':vsplit | term<CR>', opts)
 
 -- Lazy keymaps
+vim.keymap.set('n', '<leader>ls', ':Lazy sync<CR>', opts)
 -- vim.keymap.set('n', '<leader>ls', ':vsplit | term<CR>', opts)
