@@ -18,7 +18,7 @@ return { -- Highlight, edit, and navigate code
       'toml',
       'json',
       'java',
-      'groovy',
+      'groovy'
       'go',
       'gitignore',
       'graphql',

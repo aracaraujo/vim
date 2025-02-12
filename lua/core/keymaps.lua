@@ -9,10 +9,10 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 local opts = { noremap = true, silent = true }
 
 -- save file
-vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+vim.keymap.set('n', '<leader>sn', '<cmd> w <CR>', opts)
 
 -- save file without auto-formatting
-vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
+vim.keymap.set('n', '<C-s>', '<cmd>noautocmd w <CR>', opts)
 
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
@@ -42,7 +42,6 @@ vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
 -- Window management
 vim.keymap.set('n', '<leader>v', '<C-w>v', opts) -- split window vertically
-vim.keymap.set('n', '<leader>h', '<C-w>s', opts) -- split window horizontally
 vim.keymap.set('n', '<leader>se', '<C-w>=', opts) -- make split windows equal width & height
 vim.keymap.set('n', '<leader>xs', ':close<CR>', opts) -- close current split window
 
@@ -75,8 +74,10 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Terminal commands
-vim.keymap.set('n', '<leader>t', ':vsplit | term<CR>', opts)
+vim.keymap.set('n', '<leader>t', ':term<CR>', opts)
+vim.keymap.set('n', '<leader>st', ':vsplit | term<CR>', opts)
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', opts)
 
 -- Lazy keymaps
 vim.keymap.set('n', '<leader>ls', ':Lazy sync<CR>', opts)
--- vim.keymap.set('n', '<leader>ls', ':vsplit | term<CR>', opts)
+vim.keymap.set('n', '<leader>n', '<cmd>NoiceTelescope<CR>', { noremap = true, silent = true })
